@@ -7,7 +7,7 @@ angular.module('ticWithAngularFireApp')
     // $scope.currentSymbol = 'x';
     
     $scope.gameBoard = [];
-    var gameBoardRef = new Firebase("https://3dd13-ttt-game.firebaseio.com/room/" + $routeParams.id);
+    var gameBoardRef = new Firebase("https://example.firebaseio.com/room/" + $routeParams.id);
     $scope.promise = angularFire(gameBoardRef, $scope, "gameBoard");
     $scope.promise.then (function () {
       if ($scope.gameBoard.length == 0 && $routeParams.mySymbol == 'x') {

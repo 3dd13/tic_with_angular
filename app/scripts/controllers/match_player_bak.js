@@ -3,7 +3,7 @@
 angular.module('ticWithAngularFireApp')
   .controller('MatchPlayerCtrl', function ($scope, angularFire, $location) {
     $scope.waitingRoom = {};
-    var waitingRoomRef = new Firebase("https://3dd13-ttt-game.firebaseio.com/waiting_room");
+    var waitingRoomRef = new Firebase("https://example.firebaseio.com/waiting_room");
     $scope.promise = angularFire(waitingRoomRef, $scope, "waitingRoom");
     
     $scope.promise.then (function () {
