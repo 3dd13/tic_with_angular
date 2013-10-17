@@ -20,3 +20,9 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #333;
+}
