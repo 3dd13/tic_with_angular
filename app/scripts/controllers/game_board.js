@@ -9,6 +9,18 @@ angular.module('ticWithAngularFireApp')
     // $scope.gameBoard = [];
     var gameBoardRef = new Firebase("https://3dd13-ttt-game.firebaseio.com/room/" + $routeParams.id);
     $scope.promise = angularFire(gameBoardRef, $scope, "gameBoard", []);
+    
+    // gameBoardRef.on('value')
+    // gameBoard = ["", "", "", "", "", "", "", "", ""];
+    // gameBoard[5] = "x"
+    //
+    // gameBoardRef.on('child_added')
+    // gameBoard = []
+    // gameBoard.push({1: "x"})
+    //
+    // gameBoardRef.on('child_changed')
+    // gameBoard = {room: ["", "", "", "", "", "", "", "", ""]}
+    // gameBoard.room[6] = "x"
 
     $scope.promise.then (function () {
       $scope.gameBoard = [];
