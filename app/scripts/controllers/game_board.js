@@ -6,7 +6,7 @@ angular.module('ticWithAngularFireApp')
     $scope.mySymbol = $routeParams.mySymbol;    
     $scope.myTurn = false;
     
-    // $scope.gameBoard = [];
+    $scope.gameBoard = [];
     var gameBoardRef = new Firebase("https://3dd13-ttt-game.firebaseio.com/room/" + $routeParams.id);
     $scope.promise = angularFire(gameBoardRef, $scope, "gameBoard", []);
     
